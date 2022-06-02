@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "home-feature"
-include ':home-api'
-include ':home-impl'
+include ':protocol'
+include ':impl'
