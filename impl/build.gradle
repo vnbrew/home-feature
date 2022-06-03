@@ -53,10 +53,9 @@ dependencies {
     implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
 
     implementation 'com.google.dagger:dagger:2.41'
-    implementation project(path: ':data-module:protocol')
     kapt 'com.google.dagger:dagger-compiler:2.41'
+
     api project(':home-feature:protocol')
     implementation project(':data-module:protocol')
-
     implementation project(':common-module:common')
 }

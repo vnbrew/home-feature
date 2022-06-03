@@ -23,7 +23,6 @@ inline fun HomeScreen(
 
 @Composable
 fun Empty() {
-
     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         Text(
             text = "Home",
