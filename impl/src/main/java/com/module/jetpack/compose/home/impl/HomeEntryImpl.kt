@@ -6,7 +6,9 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import com.module.jetpack.compose.common.Destinations
 import com.module.jetpack.compose.common.di.injectedViewModel
+import com.module.jetpack.compose.common.find
 import com.module.jetpack.compose.data.api.LocalDataProvider
+import com.module.jetpack.compose.detail.api.DetailEntry
 import com.module.jetpack.compose.home.api.HomeEntry
 import com.module.jetpack.compose.home.impl.di.DaggerHomeComponent
 import com.module.jetpack.compose.home.impl.ui.HomeScreen
@@ -28,6 +30,8 @@ class HomeEntryImpl @Inject constructor() : HomeEntry() {
         }
 
         HomeScreen(viewModel, onUserSelected = {
+            val detail = destinations.find<DetailEntry>().startDestinationInParent(startDestination())
+            navController.navigate(detail)
         })
     }
 }
